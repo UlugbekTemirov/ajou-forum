@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ajou Forum</title>
+    <!-- <link rel="canonical" href="https://forum.cutefishos.com"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3385FF">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" media="" class="nightmode-light" href="./assets/forum-dark.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" class="nightmode-dark" href="./assets/forum-dark.css">
+    <link rel="shortcut icon" href="https://forum.cutefishos.com/assets/favicon-ohhtxnup.png">
+    <!-- <script defer="" type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.minjs"></script> -->
+    <!-- <link rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+        onload="this.onload=null;this.rel='stylesheet'"> -->
+</head>
+
+<body class="no-touch" cz-shortcut-listen="true">
+    <div id="app" class="App affix App--index" style="min-height: 1064px;">
+        <div id="app-navigation" class="App-navigation">
+            <div class="Navigation ButtonGroup App-backControl">
+                <!-- <a class="Button Navigation-back Button--icon hasIcon" href="/" title="Back to Discussion List"
+                    active="true" type="button"><i class="icon fas fa-chevron-left Button-icon"></i><span
+                        class="Button-label"></span></a> -->
+                <button class="Button Button--icon Navigation-drawer hasIcon" type="button" title=""><i
+                        class="icon fas fa-bars Button-icon"></i><span class="Button-label"></span></button>
+            </div>
+        </div>
+        <div id="drawer" class="App-drawer">
+            <header id="header" class="App-header navbar-fixed-top">
+                <!-- For details page -->
+                <div id="header-navigation" class="Header-navigation">
+                    <!-- <div class="Navigation ButtonGroup "><a class="Button Navigation-back Button--icon hasIcon" href="/"
+                            title="Back to Discussion List" active="true" type="button"><i
+                                class="icon fas fa-chevron-left Button-icon"></i><span class="Button-label"></span></a>
+                    </div> -->
+                </div>
+                <div class="container">
+                    <h1 class="Header-title">
+                        <a href="/" id="home-link">
+                            Ajou Forum
+                        </a>
+                    </h1>
+                    <div id="header-primary" class="Header-primary">
+                        <ul class="Header-controls"></ul>
+                    </div>
+                    <div id="header-secondary" class="Header-secondary">
+                        <ul class="Header-controls">
+                            <li class="item-search">
+                                <div role="search" class="Search">
+                                    <div class="Search-input"><input aria-label="Search Forum" class="FormControl"
+                                            type="search" placeholder="Search Forum"></div>
+                                    <ul class="Dropdown-menu Search-results" style="max-height: 910px;"></ul>
+                                </div>
+                            </li>
+                            <!-- If user not loged in -->
+                            <!--<li class="item-signUp"><button class="Button Button--link" type="button"
+                                    title="Sign Up"><span class="Button-label">Sign Up</span></button></li>
+                            <li class="item-logIn"><button class="Button Button--link" type="button"
+                                    title="Log In"><span class="Button-label">Log In</span></button></li>-->
+                            <!-- ---------- -->
+                            <!-- Else -->
+                            <li class="item-notifications">
+                                <div class="ButtonGroup Dropdown dropdown NotificationsDropdown itemCount0"><button
+                                        class="Dropdown-toggle Button Button--flat" aria-haspopup="menu"
+                                        aria-label="View notifications" data-toggle="dropdown" title="Notifications"><i
+                                            class="icon fas fa-bell Button-icon"></i><span
+                                            class="Button-label">Notifications</span></button>
+                                    <div class="Dropdown-menu Dropdown-menu--right"></div>
+                                </div>
+                            </li>
+                            <li class="item-session">
+                                <div class="ButtonGroup Dropdown dropdown SessionDropdown itemCount5"><button
+                                        class="Dropdown-toggle Button Button--user Button--flat" aria-haspopup="menu"
+                                        aria-label="Toggle session options dropdown menu" data-toggle="dropdown"><img
+                                            class="Avatar "
+                                            src="https://forum.cutefishos.com/assets/avatars/pSAShj8QmJnAEcLj.png"
+                                            alt=""> <span class="Button-label"><span
+                                                class="username">sevbo</span></span></button>
+                                    <ul class="Dropdown-menu dropdown-menu Dropdown-menu--right">
+                                        <li class="item-profile"><a href="/u/sevbo" active="false" type="button"
+                                                title="Profile" class="hasIcon"><i
+                                                    class="icon fas fa-user Button-icon"></i><span
+                                                    class="Button-label">Profile</span></a></li>
+                                        <li class="item-settings"><a href="/settings" active="false" type="button"
+                                                title="Settings" class="hasIcon"><i
+                                                    class="icon fas fa-cog Button-icon"></i><span
+                                                    class="Button-label">Settings</span></a></li>
+                                        <li class="item-daymode"><button type="button" title="Day Mode"
+                                                class="hasIcon"><i class="icon far fa-sun Button-icon"></i><span
+                                                    class="Button-label">Day Mode</span></button></li>
+                                        <li class="Dropdown-separator"></li>
+                                        <li class="item-logOut"><button type="button" title="Log Out" class="hasIcon"><i
+                                                    class="icon fas fa-sign-out-alt Button-icon"></i><span
+                                                    class="Button-label">Log Out</span></button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main class="App-content">
+            <div id="content">
+                <div class="IndexPage">
+                    <header class="Hero WelcomeHero" style="">
+                        <div class="container">
+                            <button class="Hero-close Button Button--icon Button--link hasIcon" type="button"
+                                title=""><i class="icon fas fa-times Button-icon"></i><span
+                                    class="Button-label"></span></button>
+                            <div class="containerNarrow">
+                                <h2 class="Hero-title"></h2>
+                                <div class="Hero-subtitle"></div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="container">
+                        <div class="sideNavContainer">
+                            <nav class="IndexPage-nav sideNav">
+                                <ul>
+                                    <li class="App-primaryControl item-newDiscussion"><button
+                                            class="Button Button--primary IndexPage-newDiscussion hasIcon"
+                                            itemclassname="App-primaryControl" type="button"
+                                            title="Start a Discussion"><i class="icon fas fa-edit Button-icon"></i><span
+                                                class="Button-label">Start a Discussion</span></button></li>
+                                    <li class="item-nav">
+                                        <div
+                                            class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount9">
+                                            <button class="Dropdown-toggle Button" aria-haspopup="menu"
+                                                aria-label="Toggle navigation dropdown menu"
+                                                data-toggle="dropdown"><span class="Button-label">All
+                                                    Discussions</span><i
+                                                    class="icon fas fa-sort Button-caret"></i></button>
+                                            <ul class="Dropdown-menu dropdown-menu ">
+                                                <li class="item-allDiscussions active"><a href="/" active="true"
+                                                        type="button" title="All Discussions" class="hasIcon"><i
+                                                            class="icon far fa-comments Button-icon"></i><span
+                                                            class="Button-label">All Discussions</span></a></li>
+                                                <li class="item-tags"><a href="/tags" active="false" type="button"
+                                                        title="Tags" class="hasIcon"><i
+                                                            class="icon fas fa-th-large Button-icon"></i><span
+                                                            class="Button-label">Tags</span></a></li>
+                                                <li class="item-tags"><a href="/tags" active="false" type="button"
+                                                        title="Tags" class="hasIcon"><i
+                                                            class="icon fas fa-th-large Button-icon"></i><span
+                                                            class="Button-label">Teachers chat</span></a></li>
+                                                <li class="Dropdown-separator"></li>
+                                                <li class="item-tag2"><a class="TagLinkButton hasIcon" href="/t/chat"
+                                                        style="" title=""><i class="Button-icon icon fas fa-code"
+                                                            style=""></i><span
+                                                            class="Button-label">Programming</span></a></li>
+                                                <li class="item-tag3"><a class="TagLinkButton hasIcon"
+                                                        href="/t/suggestion" style="" title=""><i
+                                                            class="Button-icon icon far fa-hand-spock"
+                                                            style=""></i><span class="Button-label">Calculus</span></a>
+                                                </li>
+                                                <li class="item-tag4"><a class="TagLinkButton hasIcon"
+                                                        href="/t/use-communication" style="" title=""><i
+                                                            class="Button-icon icon far fa-smile" style=""></i><span
+                                                            class="Button-label">Physics</span></a></li>
+                                                <li class="item-tag5"><a class="TagLinkButton hasIcon"
+                                                        href="/t/bug-feedback" style="" title=""><i
+                                                            class="Button-icon icon fas fa-bug" style=""></i><span
+                                                            class="Button-label">English</span></a></li>
+                                                <li class="item-tag6"><a class="TagLinkButton hasIcon"
+                                                        href="/t/development-exchange" style="" title=""><i
+                                                            class="Button-icon icon far fa-comment-dots"
+                                                            style=""></i><span class="Button-label">Korean</span></a>
+                                                </li>
+                                                <li class="item-tag7"><a class="TagLinkButton hasIcon"
+                                                        href="/t/announcement" style="" title=""><i
+                                                            class="Button-icon icon far fa-bell" style=""></i><span
+                                                            class="Button-label">Chemistry</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="IndexPage-results sideNavOffset">
+                                <div class="IndexPage-toolbar">
+                                    <ul class="IndexPage-toolbar-view">
+                                        <li class="item-sort">
+                                            <div class="ButtonGroup Dropdown dropdown  itemCount4">
+                                                <button class="Dropdown-toggle Button" aria-haspopup="menu"
+                                                    aria-label="Change discussion list sorting" data-toggle="dropdown"
+                                                    aria-expanded="false"><span class="Button-label">Latest</span><i
+                                                        class="icon fas fa-caret-down Button-caret"></i></button>
+                                                <ul class="Dropdown-menu dropdown-menu">
+                                                    <li class=""><button active="" type="button" title="Latest"
+                                                            class="hasIcon"><i
+                                                                class="icon fas fa-check Button-icon"></i><span
+                                                                class="Button-label">Latest</span></button></li>
+                                                    <li class=""><button type="button" title="Top" class="hasIcon"><span
+                                                                class="Button-label">Top</span></button></li>
+                                                    <li class=""><button type="button" title="Newest"
+                                                            class="hasIcon"><span
+                                                                class="Button-label">Newest</span></button></li>
+                                                    <li class=""><button type="button" title="Oldest"
+                                                            class="hasIcon"><span
+                                                                class="Button-label">Oldest</span></button></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="IndexPage-toolbar-action">
+                                        <li class="item-refresh"><button title="Refresh"
+                                                class="Button Button--icon hasIcon" type="button"><i
+                                                    class="icon fas fa-sync Button-icon"></i><span
+                                                    class="Button-label"></span></button></li>
+                                    </ul>
+                                </div>
+                                <div class="DiscussionList">
+                                    <ul class="DiscussionList-discussions">
+                                        <li data-id="532">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/Hachucha" title=""
+                                                        aria-label="Hachucha started 7 days ago"
+                                                        data-original-title="Hachucha started 7 days ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(219, 229, 160) none repeat scroll 0% 0%;">H</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="detail.html"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">The inconvenience of tiling
+                                                            in conjunction with the dock with smart hiding actually it
+                                                            did not works</h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-hand-spock"
+                                                                                style=""></i>
+                                                                            Suggestion</span></span></span></li>
+                                                            <li class="item-terminalPost"><span><span class="username">
+                                                                        <i
+                                                                            class="Button-icon icon far fa-thumbs-up"></i>
+                                                                    </span> 36 | by @sevbo | 7 hours ago</span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">1</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="533">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/Hachucha" title=""
+                                                        aria-label="Hachucha started 5 days ago"
+                                                        data-original-title="Hachucha started 5 days ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(219, 229, 160) none repeat scroll 0% 0%;">H</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/533-global-menu-improvements"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">Global menu improvements
+                                                        </h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-hand-spock"
+                                                                                style=""></i>
+                                                                            Suggestion</span></span></span></li>
+                                                            <li class="item-terminalPost"><span><i
+                                                                        class="icon fas fa-reply "></i> <span
+                                                                        class="username">Buddy</span> replied <time
+                                                                        pubdate="" datetime="2022-03-25T11:57:40+05:00"
+                                                                        title="Friday, March 25, 2022 11:57 AM"
+                                                                        data-humantime="">8 hours ago</time></span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">1</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="543">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/sevbo" title=""
+                                                        aria-label="sevbo started 10 hours ago"
+                                                        data-original-title="sevbo started 10 hours ago"><img
+                                                            class="Avatar "
+                                                            src="https://forum.cutefishos.com/assets/avatars/pSAShj8QmJnAEcLj.png"
+                                                            alt=""></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/543-about-website-template"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">About website template</h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-comment-dots"
+                                                                                style=""></i> Chat</span></span></span>
+                                                            </li>
+                                                            <li class="item-terminalPost"><span><i
+                                                                        class="icon fas fa-reply "></i> <span
+                                                                        class="username">sevbo</span> replied <time
+                                                                        pubdate="" datetime="2022-03-25T09:29:49+05:00"
+                                                                        title="Friday, March 25, 2022 9:29 AM"
+                                                                        data-humantime="">11 hours ago</time></span>
+                                                            </li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">1</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="542">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/Remy" title=""
+                                                        aria-label="Remy started a day ago"
+                                                        data-original-title="Remy started a day ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(229, 221, 160) none repeat scroll 0% 0%;">R</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/542-cant-pair-bluetooth-mouse"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">Can't pair bluetooth mouse
+                                                        </h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon fas fa-bug" style=""></i>
+                                                                            Bug Feedback</span></span></span></li>
+                                                            <li class="item-terminalPost"><span> <span
+                                                                        class="username">Remy</span> started <time
+                                                                        pubdate="" datetime="2022-03-24T15:22:16+05:00"
+                                                                        title="Thursday, March 24, 2022 3:22 PM"
+                                                                        data-humantime="">a day ago</time></span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">0</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="541">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/konig" title=""
+                                                        aria-label="konig started 2 days ago"
+                                                        data-original-title="konig started 2 days ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(160, 229, 224) none repeat scroll 0% 0%;">K</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/541-how-to-install-amdgpu-drivers"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">how to install amdgpu
+                                                            drivers?</h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-smile" style=""></i>
+                                                                            Use Communication</span></span></span></li>
+                                                            <li class="item-terminalPost"><span><i
+                                                                        class="icon fas fa-reply "></i> <span
+                                                                        class="username">konig</span> replied <time
+                                                                        pubdate="" datetime="2022-03-23T20:46:04+05:00"
+                                                                        title="Wednesday, March 23, 2022 8:46 PM"
+                                                                        data-humantime="">2 days ago</time></span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">2</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="541">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/konig" title=""
+                                                        aria-label="konig started 2 days ago"
+                                                        data-original-title="konig started 2 days ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(160, 229, 224) none repeat scroll 0% 0%;">K</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/541-how-to-install-amdgpu-drivers"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">how to install amdgpu
+                                                            drivers?</h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-smile" style=""></i>
+                                                                            Use Communication</span></span></span></li>
+                                                            <li class="item-terminalPost"><span><i
+                                                                        class="icon fas fa-reply "></i> <span
+                                                                        class="username">konig</span> replied <time
+                                                                        pubdate="" datetime="2022-03-23T20:46:04+05:00"
+                                                                        title="Wednesday, March 23, 2022 8:46 PM"
+                                                                        data-humantime="">2 days ago</time></span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">2</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li data-id="541">
+                                            <div class="DiscussionListItem">
+                                                <span
+                                                    class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                        class="icon fas fa-check "></i></span>
+                                                <div class="DiscussionListItem-content Slidable-content">
+                                                    <a class="DiscussionListItem-author" href="/u/konig" title=""
+                                                        aria-label="konig started 2 days ago"
+                                                        data-original-title="konig started 2 days ago"><span
+                                                            class="Avatar "
+                                                            style="background: rgb(160, 229, 224) none repeat scroll 0% 0%;">K</span></a>
+                                                    <ul class="DiscussionListItem-badges badges"></ul>
+                                                    <a href="/d/541-how-to-install-amdgpu-drivers"
+                                                        class="DiscussionListItem-main">
+                                                        <h3 class="DiscussionListItem-title">how to install amdgpu
+                                                            drivers?</h3>
+                                                        <ul class="DiscussionListItem-info">
+                                                            <li class="item-tags"><span class="TagsLabel "><span
+                                                                        style="" class="TagLabel "><span
+                                                                            class="TagLabel-text"><i
+                                                                                class="icon far fa-smile" style=""></i>
+                                                                            Use Communication</span></span></span></li>
+                                                            <li class="item-terminalPost"><span><i
+                                                                        class="icon fas fa-reply "></i> <span
+                                                                        class="username">konig</span> replied <time
+                                                                        pubdate="" datetime="2022-03-23T20:46:04+05:00"
+                                                                        title="Wednesday, March 23, 2022 8:46 PM"
+                                                                        data-humantime="">2 days ago</time></span></li>
+                                                        </ul>
+                                                    </a>
+                                                    <span tabindex="0" role="button" class="DiscussionListItem-count"
+                                                        title="">2</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="DiscussionList-loadMore"><button class="Button" type="button"
+                                            title="Load More"><span class="Button-label">Load More</span></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="App-composer">
+                    <div class="container">
+                        <div id="composer">
+                            <div class="Composer " style="display: none; bottom: -300px; height: 300px;">
+                                <div class="Composer-handle" style="cursor: row-resize;"></div>
+                                <ul class="Composer-controls">
+                                    <li class="App-backControl item-minimize"><button title="Minimize" itemclassname="App-backControl" class="Button Button--icon Button--link hasIcon" type="button"><i class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li>
+                                    <li class="item-fullScreen"><button title="Full Screen" class="Button Button--icon Button--link hasIcon" type="button"><i class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li>
+                                    <li class="item-close"><button title="Close" class="Button Button--icon Button--link hasIcon" type="button"><i class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li>
+                                </ul>
+                                <div class="Composer-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </main>
+    </div>
+    <div style="background: #F3F3F7; padding-top: 30px; padding-bottom: 20px;">
+        <p style="color: #667C99;" align="center">Copyright © abdusamad.uz 2022</p>
+    </div>
+</body>
+
+</html>

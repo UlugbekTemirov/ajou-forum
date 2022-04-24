@@ -17,6 +17,7 @@
     <!-- <link rel="stylesheet" as="style"
         href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
         onload="this.onload=null;this.rel='stylesheet'"> -->
+    <script defer src="assets/js/index.js"></script>
 </head>
 
 <body class="no-touch" cz-shortcut-listen="true">
@@ -186,22 +187,24 @@
                                     <ul class="IndexPage-toolbar-view">
                                         <li class="item-sort">
                                             <div class="ButtonGroup Dropdown dropdown  itemCount4">
-                                                <button class="Dropdown-toggle Button" aria-haspopup="menu"
-                                                    aria-label="Change discussion list sorting" data-toggle="dropdown"
-                                                    aria-expanded="false"><span class="Button-label">Latest</span><i
+                                                <button id="latestSituationButton" class="Dropdown-toggle Button"
+                                                    aria-haspopup="menu" aria-label="Change discussion list sorting"
+                                                    data-toggle="dropdown" aria-expanded="false"><span
+                                                        class="Button-label">Latest</span><i
                                                         class="icon fas fa-caret-down Button-caret"></i></button>
-                                                <ul class="Dropdown-menu dropdown-menu">
+                                                <ul id="latestSituationDropdown" class="Dropdown-menu dropdown-menu">
                                                     <li class=""><button active="" type="button" title="Latest"
-                                                            class="hasIcon"><i
+                                                            class="hasIcon stn-btn"><i
                                                                 class="icon fas fa-check Button-icon"></i><span
                                                                 class="Button-label">Latest</span></button></li>
-                                                    <li class=""><button type="button" title="Top" class="hasIcon"><span
+                                                    <li class=""><button type="button" title="Top"
+                                                            class="hasIcon stn-btn"><span
                                                                 class="Button-label">Top</span></button></li>
                                                     <li class=""><button type="button" title="Newest"
-                                                            class="hasIcon"><span
+                                                            class="hasIcon stn-btn"><span
                                                                 class="Button-label">Newest</span></button></li>
                                                     <li class=""><button type="button" title="Oldest"
-                                                            class="hasIcon"><span
+                                                            class="hasIcon stn-btn"><span
                                                                 class="Button-label">Oldest</span></button></li>
                                                 </ul>
                                             </div>
@@ -228,8 +231,7 @@
                                                             class="Avatar "
                                                             style="background: rgb(219, 229, 160) none repeat scroll 0% 0%;">H</span></a>
                                                     <ul class="DiscussionListItem-badges badges"></ul>
-                                                    <a href="detail.html"
-                                                        class="DiscussionListItem-main">
+                                                    <a href="detail.html" class="DiscussionListItem-main">
                                                         <h3 class="DiscussionListItem-title">The inconvenience of tiling
                                                             in conjunction with the dock with smart hiding actually it
                                                             did not works</h3>
